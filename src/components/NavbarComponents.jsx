@@ -3,13 +3,16 @@ import { Navbar, Container, Nav } from 'react-bootstrap';
 import { navLinks } from "../data/index";
 import { NavLink } from "react-router-dom";
 
+import LogoImage from "/public/logo.png"
+
 const NavbarComponents = () => {
   return (
     <Navbar expand="lg">
       <Container>
-        <Navbar.Brand href="#home" className="fs-3 fw-bold">PEJUANGTB</Navbar.Brand>
+        <Navbar.Brand href="#home"><img src={LogoImage} alt="" /></Navbar.Brand> 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
+          {/* Link Menu Navbar */}
           <Nav className="mx-auto">
             {navLinks.map((link) => {
               return (
