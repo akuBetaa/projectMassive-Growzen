@@ -1,3 +1,7 @@
+import IconPill from "../assets/icons/icon-pill.svg";
+import IconStock from "../assets/icons/icon-stock.svg";
+import IconForum from "../assets/icons/icon-forum.svg";
+
 export const navLinks = [
     {
       id: 1,
@@ -14,9 +18,26 @@ export const navLinks = [
       path: "forum",
       text: "Forum",
     },
-    // {
-    //   id: 4,
-    //   path: "login",
-    //   text: "Login",
-    // },
   ];
+
+  export const fiturApps = [
+    {
+      id      : 1,
+      image   : IconPill,
+      title : "Pengingat Minum Obat",
+      text   : "Membantu mengingatkan Anda dalam meminum obat OAT tepat waktu",
+    },
+    {
+      id      : 2,
+      image   : IconStock,
+      title : "Stok Obat",
+      text   : "Bantu menghitung penyimpanan obat dan jadwal pengambilan obat OAT",
+    },
+    {
+      id      : 1,
+      image   : IconForum,
+      title : "Forum Komunitas",
+      text   : "Wadah sesama pejuang sembuh TB untuk saling berbagi, memotivasi dan menyemangati untuk sembuh TB",
+    },
+  ]
+  
