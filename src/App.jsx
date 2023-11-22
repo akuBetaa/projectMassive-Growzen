@@ -6,7 +6,7 @@ import ForumPage from './pages/ForumPage'
 import LoginPage from './pages/LoginPage'
 
 import NavbarComponents from './components/NavbarComponents'
-import FooterComponents from './components/FooterComponents'
+// import FooterComponents from './components/FooterComponents'
 
 function App() {
   return (
@@ -17,10 +17,10 @@ function App() {
         <Route path='/' Component={BerandaPage} />
         <Route path='/artikel' Component={ArtikelPage} />
         <Route path='/forum' Component={ForumPage} />
-        <Route path='/login' Component={LoginPage} />
+        {/* <Route path='/login' Component={LoginPage} /> */}
       </Routes>
 
-      <FooterComponents/>
+      {/* <FooterComponents/> */}
     </div>
   )
 }
