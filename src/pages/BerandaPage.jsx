@@ -4,6 +4,7 @@ import {Container, Row, Col} from 'react-bootstrap';
 import PlaysoteImage from "../assets/playstore.svg";
 import CtaForum from "../assets/img/img-forum.svg";
 import IconCtg from "../assets/icons/icon-ctg.svg";
+import PhoneImg from "../assets/img/phone.png";
 
 // import data 
 import {fiturApps} from "../data/index.js"
@@ -87,11 +88,11 @@ const BerandaPage = () => {
 
                 <div className='d-flex fw-bold'>
                   <img src={IconCtg} alt=""/>
-                  <p className='px-2'>Komunikasi mudah semasa Pejuang TB</p>
+                  <p className='px-2 m-0'>Komunikasi mudah semasa Pejuang TB</p>
                 </div>
-                <div className='d-flex fw-bold'>
+                <div className='d-flex fw-bold mt-2'>
                   <img src={IconCtg} alt="" />
-                  <p className='px-2'>Saling berbagi, memotvasi sembuh bersama</p>
+                  <p className='px-2 m-0'>Saling berbagi, memotvasi sembuh bersama</p>
                 </div>
 
                 <button className='btn btn-primary mt-4 px-4 py-2'>Gabung Sekarang!</button>
@@ -101,20 +102,37 @@ const BerandaPage = () => {
         </div>
 
         {/* APPS DOWNLOAD SECTION  */}
-        <div className='app-download w-100 min-vh-100'>
+        <div className='app-download w-100 min-vh-100 align-items-center'>
           <Container>
-            <Row>
-              <Col>
+            <Row className='d-flex align-items-center'>
+              {/* <div className='bg-img'></div> */}
+              <Col lg="8" className='text-app'>
                 <p className='text1'>Download Aplikasi</p>
                 <h1>
                   Dapatkan <span>Aplikasi Pejuang TB</span>
                 </h1>
-                <p className='text2'>Aplikasi kami tersedia di Play Store secara gratis, segera unduh untuk menemani kesembuhanmu dari TB dan temukan sesama pejuang TB dengan berbagai fitur kemudahan yang Anda dapatkan</p>
+                <p className='text2 py-2'>
+                  Aplikasi kami tersedia di Play Store secara gratis, segera unduh untuk menemani <br/> 
+                  kesembuhanmu dari TB dan temukan sesama pejuang TB dengan berbagai fitur <br/>
+                  kemudahan yang Anda dapatkan
+                </p>
+                <img src={PlaysoteImage} alt="playstore-img" />
               </Col>
-              <Col></Col>
+
+              <Col lg = "4">
+              <img src={PhoneImg} alt="phone-apps-img" /></Col>
             </Row>
           </Container>
         </div>
+
+        {/* ARTIKEL SECTION  */}
+        {/* <div className='artikel w-100 min-vh-100 align-items-center'>
+          <Container>
+            <Row>
+
+            </Row>
+          </Container>
+        </div> */}
     </div>
   )
 }

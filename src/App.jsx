@@ -6,7 +6,7 @@ import ForumPage from './pages/ForumPage'
 import LoginPage from './pages/LoginPage'
 
 import NavbarComponents from './components/NavbarComponents'
-// import FooterComponents from './components/FooterComponents'
+import FooterComponents from './components/FooterComponents'
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
         {/* <Route path='/login' Component={LoginPage} /> */}
       </Routes>
 
-      {/* <FooterComponents/> */}
+      <FooterComponents/>
     </div>
   )
 }
