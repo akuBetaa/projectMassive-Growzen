@@ -1,6 +1,6 @@
 const ForumPage = () => {
   return (
-    <div>ForumPage</div>
+    <div className="w-100 min-vh-100">ForumPage</div>
   )
 }
 

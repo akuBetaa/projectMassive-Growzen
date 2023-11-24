@@ -1,4 +1,4 @@
-import {Container, Row, Col} from 'react-bootstrap';
+import {Container, Row, Col, Button, Card} from 'react-bootstrap';
 
 //import image
 import PlaysoteImage from "../assets/playstore.svg";
@@ -7,7 +7,7 @@ import IconCtg from "../assets/icons/icon-ctg.svg";
 import PhoneImg from "../assets/img/phone.png";
 
 // import data 
-import {fiturApps} from "../data/index.js"
+import {fiturApps, postArtikel} from "../data/index.js"
 
 const BerandaPage = () => {
   return (
@@ -126,13 +126,36 @@ const BerandaPage = () => {
         </div>
 
         {/* ARTIKEL SECTION  */}
-        {/* <div className='artikel w-100 min-vh-100 align-items-center'>
+        <div className='artikel w-100 min-vh-100 align-items-center'>
           <Container>
+            {/* HEADING TEXT ARTIKEL  */}
             <Row>
+              <Col>
+                <p className='text'>
+                  Edukasi Tubercolosis  
+                </p>
+                <h2 className=' fw-bold'>Artikel Seputar TBC</h2>
+            </Col>
+            </Row>
 
+            {/* POST ARTIKEL  */}
+            <Row>
+              {postArtikel.map((artikel) => {
+                return (
+                  <Col key={artikel.id}>
+                    <Card>
+                      <Card.Body>
+                        <Card.Title>{artikel.title}</Card.Title>
+                        <Card.Text>{artikel.text}</Card.Text>
+                        <Button>Selengkapnya</Button>
+                      </Card.Body>
+                    </Card>
+                  </Col>
+                )
+              })}
             </Row>
           </Container>
-        </div> */}
+        </div>
     </div>
   )
 }

@@ -1,6 +1,8 @@
 const ArtikelPage = () => {
   return (
-    <div>ArtikelPage</div>
+    <div className="w-100 min-vh-100">
+      ArtikelPage
+      </div>
   )
 }
 
