@@ -7,7 +7,9 @@ import IconCtg from "../assets/icons/icon-ctg.svg";
 import PhoneImg from "../assets/img/phone.png";
 
 // import data 
-import {fiturApps, postArtikel} from "../data/index.js"
+import {fiturApps} from "../data/index.js"
+
+import PostComponents from '../components/PostComponents.jsx';
 
 const BerandaPage = () => {
   return (
@@ -126,7 +128,7 @@ const BerandaPage = () => {
         </div>
 
         {/* ARTIKEL SECTION  */}
-        <div className='artikel w-100 min-vh-100 align-items-center'>
+        <div className='artikel w-100 align-items-center'>
           <Container>
             {/* HEADING TEXT ARTIKEL  */}
             <Row>
@@ -140,19 +142,7 @@ const BerandaPage = () => {
 
             {/* POST ARTIKEL  */}
             <Row>
-              {postArtikel.map((artikel) => {
-                return (
-                  <Col key={artikel.id}>
-                    <Card>
-                      <Card.Body>
-                        <Card.Title>{artikel.title}</Card.Title>
-                        <Card.Text>{artikel.text}</Card.Text>
-                        <Button>Selengkapnya</Button>
-                      </Card.Body>
-                    </Card>
-                  </Col>
-                )
-              })}
+               <PostComponents/>    
             </Row>
           </Container>
         </div>
