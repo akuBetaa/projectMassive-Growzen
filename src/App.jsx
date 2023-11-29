@@ -17,7 +17,7 @@ function App() {
         <Route path='/' Component={BerandaPage} />
         <Route path='/artikel' Component={ArtikelPage} />
         <Route path='/forum' Component={ForumPage} />
-        {/* <Route path='/login' Component={LoginPage} /> */}
+        <Route path='/login' Component={LoginPage} />
       </Routes>
 
       <FooterComponents/>

@@ -5,6 +5,7 @@ import { navLinks } from "../data/index";
 import { NavLink } from "react-router-dom";
 
 import LogoImage from "/public/logo2.png"
+import LoginComponents from "../components/LoginComponents"
 
 const NavbarComponents = () => {
   const [changeColor, setChangeColor] = useState(false);
@@ -43,7 +44,7 @@ const NavbarComponents = () => {
           </Nav>
 
           <div className="text-center">
-            <button className='btn btn-primary rounded-2'>Login</button>
+            <LoginComponents/>
           </div>
         </Navbar.Collapse>
       </Container>
