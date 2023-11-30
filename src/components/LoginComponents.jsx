@@ -1,6 +1,12 @@
 import { useState } from 'react';
 import {Button, Modal, Form} from 'react-bootstrap';
+
+//import link
+import { Link } from "react-router-dom";
+
+//import image
 import LogoImage from "/public/logo2.png"
+import PlayStoreImg from "../assets/playstore.svg"
 
 function Example() {
   const [show, setShow] = useState(false);
@@ -23,10 +29,15 @@ function Example() {
 
 
         <Modal.Body className='mb-5'>
-            <img src={LogoImage} alt="logo=image" />
+          <div className='logoImg mt-2 mb-4'>
+            <img src={LogoImage} alt="logo=image"/>
+          </div>
 
-            <p>Welocome back 👋</p>
+          <div className='mb-3'>
+            <p className='my-1'>Welocome back 👋</p>
             <h3>Login to your account</h3>
+          </div>
+
             <>
                 <Form>
                     <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
@@ -45,11 +56,28 @@ function Example() {
                         <Form.Control type='password' placeholder='password' autoFocus/>
                     </Form.Group>
 
-                    <Button variant="primary" type="submit">
-                        Submit
+                    <Button variant="primary" type="submit" className='my-2'>
+                        Login
                     </Button>
                 </Form>
-            </>
+          </>
+
+          <div className='text-center mt-3'>
+            <p>
+              Don't  have an account?  
+              <Link to="forum" className='signup ms-2'>Sign up</Link>
+            </p>
+
+            <p>Or</p>
+          </div>
+
+            <div className='unduh'>
+              <p>
+                Dapatkan Aplikasi <br />di Play Store
+              </p>
+              <img src={PlayStoreImg} alt="" />
+            </div>
+
         </Modal.Body>
         {/* <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
