@@ -12,9 +12,12 @@ const PostComponents = () => {
                 {postArtikel.map((artikel) => {
                     return (
                     <Col key={artikel.id} className='kartu'>
-                        <h5 className="fw-bold fs-4 mb-2">{artikel.title}</h5>
-                        <p>{artikel.text}</p>
-                        <Button className='mt-2'>Selengkapnya</Button>
+                        <img className='w-100' src={artikel.image} alt="" />
+                        <div className='text-artikel'>
+                            <h5 className="fw-bold fs-4 mb-2">{artikel.title}</h5>
+                            <p>{artikel.text}</p>
+                            <Button className='mt-2'>Selengkapnya</Button>
+                        </div>
 
                         {/* <Card className='kartu p-2'>
                         <Card.Body>

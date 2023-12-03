@@ -1,4 +1,4 @@
-import {Container, Row, Col, Button, Card} from 'react-bootstrap';
+import { Container, Row, Col, Button, Carousel } from 'react-bootstrap';
 
 //import image
 import PlaysoteImage from "../assets/playstore.svg";
@@ -8,8 +8,9 @@ import PhoneImg from "../assets/img/phone.png";
 
 // import data 
 import {fiturApps} from "../data/index.js"
+import {postArtikel} from "../data/index.js";
 
-import PostComponents from '../components/PostComponents.jsx';
+// import PostComponents from '../components/PostComponents.jsx';
 
 const BerandaPage = () => {
   return (
@@ -141,8 +142,23 @@ const BerandaPage = () => {
             </Row>
 
             {/* POST ARTIKEL  */}
-            <Row>
-               <PostComponents/>    
+            <Row className='mt-5'>
+               {/* <PostComponents/>     */}
+              {/* <Carousel> */}
+               {postArtikel.map((artikel) => {
+                    return (
+                    <Col key={artikel.id} className='post'>
+                        {/* <img className='w-100' src={artikel.image} alt="" /> */}
+                          <h5 className="fw-bold fs-4 mb-2">{artikel.title}</h5>
+                          <p>{artikel.text}</p>
+                          <Button className='mt-2'>Selengkapnya</Button>
+                        {/* <div className='text-artikel'>
+                        </div> */}
+                    </Col>
+                    )
+                })}
+
+              {/* </Carousel> */}
             </Row>
           </Container>
         </div>

@@ -6,6 +6,7 @@ import App from './App.jsx'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './dist/css/main.css'
 import './dist/css/component.css'
+import './dist/css/comments.css'
 
 import {BrowserRouter} from 'react-router-dom'
 

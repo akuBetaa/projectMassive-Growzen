@@ -2,13 +2,15 @@ import { useState } from 'react';
 import {Button, Modal, Form} from 'react-bootstrap';
 
 //import link
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+// import SignupComponents from './SignupComponents';
 
 //import image
-import LogoImage from "/public/logo2.png"
+import LogoImag from "/public/logo2.png"
 import PlayStoreImg from "../assets/playstore.svg"
+import RegisterComponents from './RegisterComponents';
 
-function Example() {
+function LoginComponents() {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -30,7 +32,7 @@ function Example() {
 
         <Modal.Body className='mb-5'>
           <div className='logoImg mt-2 mb-4'>
-            <img src={LogoImage} alt="logo=image"/>
+            <img src={LogoImag} alt="logo=image"/>
           </div>
 
           <div className='mb-3'>
@@ -39,21 +41,21 @@ function Example() {
           </div>
 
             <>
-                <Form>
-                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                <Form className='wrapper'>
+                    <Form.Group className="mb-3 was-validated" controlId="exampleForm.ControlInput1">
                         <Form.Label>Email address</Form.Label>
                         <Form.Control
                             type="email"
                             placeholder="name@example.com"
-                            autoFocus
+                            autoFocus required
                         />
                     </Form.Group>
                         <Form.Group
-                        className="mb-3"
+                        className="mb-3 was-validated"
                         controlId="exampleForm.ControlTextarea1"
                         >
                         <Form.Label>Password</Form.Label>
-                        <Form.Control type='password' placeholder='password' autoFocus/>
+                        <Form.Control type='password' placeholder='password' autoFocus required/>
                     </Form.Group>
 
                     <Button variant="primary" type="submit" className='my-2'>
@@ -65,10 +67,13 @@ function Example() {
           <div className='text-center mt-3'>
             <p>
               Don't  have an account?  
-              <Link to="forum" className='signup ms-2'>Sign up</Link>
+              {/* <Link to="signup" className='signup ms-2'>Sign up</Link> */}
+              {/* <SignupComponents /> */}
+              <RegisterComponents />
             </p>
 
             <p>Or</p>
+              
           </div>
 
             <div className='unduh'>
@@ -92,4 +97,4 @@ function Example() {
   );
 }
 
-export default Example;
+export default LoginComponents;

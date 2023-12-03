@@ -19,7 +19,7 @@ const NavbarComponents = () => {
   }
 
   useEffect (() => {
-    changeBackgroundColor()
+    changeBackgroundColor();
 
     window.addEventListener( "scroll", changeBackgroundColor);
   })
@@ -27,16 +27,16 @@ const NavbarComponents = () => {
   return (
     <Navbar expand="lg" className={changeColor ? "color-active" : ""}>
       <Container>
-        <Navbar.Brand href="#home"><img src={LogoImage} alt="logo-img" /></Navbar.Brand> 
+        <Navbar.Brand href="#beranda"><img src={LogoImage} alt="logo-img" /></Navbar.Brand> 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           {/* Link Menu Navbar */}
-          <Nav className="mx-auto">
+          <Nav className="mx-auto text-center">
             {navLinks.map((link) => {
               return (
                 <div className="nav-link text-center" key={link.id}>
                   <NavLink to={link.path} 
-                    className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""} end>
+                    className={({ isActive, isPending }) => (isPending ? "pending" : isActive ? "active" : "")} end>
                     {link.text}</NavLink>
                 </div>
               );
