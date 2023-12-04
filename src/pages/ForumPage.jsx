@@ -2,17 +2,22 @@ import { Container, Row, Col, Nav, Tab } from "react-bootstrap";
 
 import Comments from "../components/comments/Comments"
 
+// import image 
+import iconSatu from "../assets/icons/icon-discussion.svg";
+import iconDua from "../assets/icons/icon-myquestion.svg";
+import iconTiga from "../assets/icons/icon-myparticipations.svg";
+
 const ForumPage = () => {
   return (
     <div className="forum">
       <div>
         <Container>
           <Row className="">
-            <Col  className="xxx">
-              <p className='text'>
+            <Col  className="header">
+              {/* <p className='text'>
                 Edukasi Tubercolosis
-              </p>
-              <h2 className=' fw-bold'>Artikel Seputar TBC</h2>
+              </p> */}
+              <h2 className=' fw-bold'>Forum Pejuang TB</h2>
             </Col>
           </Row>
         </Container>
@@ -22,16 +27,38 @@ const ForumPage = () => {
         <Container>
           <Tab.Container id="left-tabs-example" defaultActiveKey="first">
             <Row>
-              <Col sm={3} className="">
+              {/* SECTION MENU FORUM  */}
+              <Col sm={3} className="menu">
                 <Nav variant="pills" className="flex-column">
                   <Nav.Item>
-                    <Nav.Link eventKey="first">Tab 1</Nav.Link>
+                    <Nav.Link eventKey="first">
+                      <div className="d-flex menu-list">
+                        <img src={iconSatu} alt="" />
+                        <p className="ms-3 pt-3">Discussion</p>
+                      </div>
+                    </Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link eventKey="second">Tab 2</Nav.Link>
+                    <Nav.Link eventKey="second">
+                    <div className="d-flex menu-list">
+                        <img src={iconDua} alt="" />
+                        <p className="ms-3 pt-3">My Question</p>
+                      </div>
+                      </Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
+                    <Nav.Link eventKey="three">
+                    <div className="d-flex menu-list">
+                        <img src={iconTiga} alt="" />
+                        <p className="ms-3 pt-3">My Participations</p>
+                      </div>
+                      
+                      </Nav.Link>
                   </Nav.Item>
                 </Nav>
               </Col>
+
+              {/* SECTION CONTENT FORUM  */}
               <Col sm={9} className="">
                 <Tab.Content>
                   <Tab.Pane eventKey="first">First tab content</Tab.Pane>
