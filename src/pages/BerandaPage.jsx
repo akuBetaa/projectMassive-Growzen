@@ -1,4 +1,5 @@
 import { Container, Row, Col, Button, Carousel } from 'react-bootstrap';
+import { Link } from 'react-router-dom'; 
 
 //import image
 import PlaysoteImage from "../assets/playstore.svg";
@@ -145,13 +146,16 @@ const BerandaPage = () => {
             <Row className='mt-5'>
                {/* <PostComponents/>     */}
               {/* <Carousel> */}
-               {postArtikel.map((artikel) => {
+               {postArtikel.map((article) => {
                     return (
-                    <Col key={artikel.id} className='post'>
+                    <Col key={article.id} className='post'>
                         {/* <img className='w-100' src={artikel.image} alt="" /> */}
-                          <h5 className="fw-bold fs-4 mb-2">{artikel.title}</h5>
-                          <p>{artikel.text}</p>
-                          <Button className='mt-2'>Selengkapnya</Button>
+                          <h5 className="fw-bold fs-4 mb-2">{article.title}</h5>
+                          <p>{article.text}</p>
+
+                          <Link to={`/artikel/${article.id}`}>
+                                <Button className='mt-2'>Selengkapnya</Button>
+                            </Link>
                         {/* <div className='text-artikel'>
                         </div> */}
                     </Col>

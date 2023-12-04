@@ -42,45 +42,6 @@ export const navLinks = [
       },
     ]
 
-export const postArtikel = [
-      {
-        id    : 1,
-        image : ImgArticle,
-        title : "Apa itu Tuberkulosis?",
-        text  : "Tuberkulosis atau TB adalah penyakit yang pasti sudah sangat umum Anda dengar. Ya, TB termasuk salah satu penyakit menular dan disebabkan oleh infeksi bakteri, di mana bakteri ini berpotensi menyerang berbagai organ tubuh, salah satunya paru-paru....",
-      },
-      {
-        id    : 2,
-        image : ImgArticle,
-        title : "Apa itu Tuberkulosis?",
-        text  : "Tuberkulosis atau TB adalah penyakit yang pasti sudah sangat umum Anda dengar. Ya, TB termasuk salah satu penyakit menular dan disebabkan oleh infeksi bakteri, di mana bakteri ini berpotensi menyerang berbagai organ tubuh, salah satunya paru-paru....",
-      },
-      {
-        id    : 3,
-        image : ImgArticle,
-        title : "Apa itu Tuberkulosis?",
-        text  : "Tuberkulosis atau TB adalah penyakit yang pasti sudah sangat umum Anda dengar. Ya, TB termasuk salah satu penyakit menular dan disebabkan oleh infeksi bakteri, di mana bakteri ini berpotensi menyerang berbagai organ tubuh, salah satunya paru-paru....",
-      },
-      {
-        id    : 4,
-        image : ImgArticle,
-        title : "Apa itu Tuberkulosis?",
-        text  : "Tuberkulosis atau TB adalah penyakit yang pasti sudah sangat umum Anda dengar. Ya, TB termasuk salah satu penyakit menular dan disebabkan oleh infeksi bakteri, di mana bakteri ini berpotensi menyerang berbagai organ tubuh, salah satunya paru-paru....",
-      },
-      {
-        id    : 5,
-        image : ImgArticle,
-        title : "Apa itu Tuberkulosis?",
-        text  : "Tuberkulosis atau TB adalah penyakit yang pasti sudah sangat umum Anda dengar. Ya, TB termasuk salah satu penyakit menular dan disebabkan oleh infeksi bakteri, di mana bakteri ini berpotensi menyerang berbagai organ tubuh, salah satunya paru-paru....",
-      },
-      {
-        id    : 6,
-        image : ImgArticle,
-        title : "Apa itu Tuberkulosis?",
-        text  : "Tuberkulosis atau TB adalah penyakit yang pasti sudah sangat umum Anda dengar. Ya, TB termasuk salah satu penyakit menular dan disebabkan oleh infeksi bakteri, di mana bakteri ini berpotensi menyerang berbagai organ tubuh, salah satunya paru-paru....",
-      }
-    ]
-
     //COMMENT
 
     export const getComments = async () => {
@@ -138,3 +99,45 @@ export const postArtikel = [
     export const deleteComment = async () => {
       return {};
     };
+
+
+    // ARTIKEL 
+
+    export const postArtikel = [
+      {
+        id    : 1,
+        image : ImgArticle,
+        title : "Apa itu Tuberkulosis?",
+        text  : "Tuberkulosis atau TB adalah penyakit yang pasti sudah sangat umum Anda dengar. Ya, TB termasuk salah satu penyakit menular dan disebabkan oleh infeksi bakteri, di mana bakteri ini berpotensi menyerang berbagai organ tubuh, salah satunya paru-paru....",
+      },
+      {
+        id    : 2,
+        image : ImgArticle,
+        title : "Apa itu Tuberkulosis?",
+        text  : "Tuberkulosis atau TB adalah penyakit yang pasti sudah sangat umum Anda dengar. Ya, TB termasuk salah satu penyakit menular dan disebabkan oleh infeksi bakteri, di mana bakteri ini berpotensi menyerang berbagai organ tubuh, salah satunya paru-paru....",
+      },
+      {
+        id    : 3,
+        image : ImgArticle,
+        title : "Apa itu Tuberkulosis?",
+        text  : "Tuberkulosis atau TB adalah penyakit yang pasti sudah sangat umum Anda dengar. Ya, TB termasuk salah satu penyakit menular dan disebabkan oleh infeksi bakteri, di mana bakteri ini berpotensi menyerang berbagai organ tubuh, salah satunya paru-paru....",
+      },
+      {
+        id    : 4,
+        image : ImgArticle,
+        title : "Apa itu Tuberkulosis?",
+        text  : "Tuberkulosis atau TB adalah penyakit yang pasti sudah sangat umum Anda dengar. Ya, TB termasuk salah satu penyakit menular dan disebabkan oleh infeksi bakteri, di mana bakteri ini berpotensi menyerang berbagai organ tubuh, salah satunya paru-paru....",
+      },
+      {
+        id    : 5,
+        image : ImgArticle,
+        title : "Apa itu Tuberkulosis?",
+        text  : "Tuberkulosis atau TB adalah penyakit yang pasti sudah sangat umum Anda dengar. Ya, TB termasuk salah satu penyakit menular dan disebabkan oleh infeksi bakteri, di mana bakteri ini berpotensi menyerang berbagai organ tubuh, salah satunya paru-paru....",
+      },
+      {
+        id    : 6,
+        image : ImgArticle,
+        title : "Apa itu Tuberkulosis?",
+        text  : "Tuberkulosis atau TB adalah penyakit yang pasti sudah sangat umum Anda dengar. Ya, TB termasuk salah satu penyakit menular dan disebabkan oleh infeksi bakteri, di mana bakteri ini berpotensi menyerang berbagai organ tubuh, salah satunya paru-paru....",
+      }
+    ]

@@ -1,5 +1,6 @@
 import React from 'react'
-import {Container, Row, Col, Button, Card} from 'react-bootstrap';
+import {Container, Row, Col, Button} from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 // import data 
 import {postArtikel} from "../data/index.js"
@@ -9,23 +10,17 @@ const PostComponents = () => {
     <div className="artikel">
         <Container>
             <Row >
-                {postArtikel.map((artikel) => {
+                {postArtikel.map((article) => {
                     return (
-                    <Col key={artikel.id} className='kartu'>
-                        <img className='w-100' src={artikel.image} alt="" />
+                    <Col key={article.id} className='kartu'>
+                        <img className='w-100' src={article.image} alt="" />
                         <div className='text-artikel'>
-                            <h5 className="fw-bold fs-4 mb-2">{artikel.title}</h5>
-                            <p>{artikel.text}</p>
-                            <Button className='mt-2'>Selengkapnya</Button>
+                            <h5 className="fw-bold fs-4 mb-2">{article.title}</h5>
+                            <p>{article.text}</p>
+                            <Link to={`/artikel/${article.id}`}>
+                                <Button className='mt-2'>Selengkapnya</Button>
+                            </Link>
                         </div>
-
-                        {/* <Card className='kartu p-2'>
-                        <Card.Body>
-                            <Card.Title className='fw-bold fs-4 mb-2'>{artikel.title}</Card.Title>
-                            <Card.Text>{artikel.text}</Card.Text>
-                            <Button className='mt-2'>Selengkapnya</Button>
-                        </Card.Body>
-                        </Card> */}
                     </Col>
                     )
                 })}
