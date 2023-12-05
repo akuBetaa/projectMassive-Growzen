@@ -18,6 +18,7 @@ const CommentformComponents = ({
         <form onSubmit={onSubmit}>
             <textarea
                 className="comment-form-textarea"
+                placeholder="Tulis komentar disini"
                 value={text}
                 onChange={(e) => setText(e.target.value)}
             />

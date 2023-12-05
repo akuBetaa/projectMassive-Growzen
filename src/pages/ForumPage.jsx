@@ -1,11 +1,17 @@
 import { Container, Row, Col, Nav, Tab } from "react-bootstrap";
 
-import Comments from "../components/comments/Comments"
+
+import ForumSatu from "../components/forum/ForumSatu";
+import ForumDua from "../components/forum/ForumDua";
+import { ForumTiga } from "../components/forum/ForumTiga";
+import ForumEmpat from "../components/forum/ForumEmpat";
 
 // import image 
 import iconSatu from "../assets/icons/icon-discussion.svg";
 import iconDua from "../assets/icons/icon-myquestion.svg";
 import iconTiga from "../assets/icons/icon-myparticipations.svg";
+
+
 
 const ForumPage = () => {
   return (
@@ -61,10 +67,19 @@ const ForumPage = () => {
               {/* SECTION CONTENT FORUM  */}
               <Col sm={9} className="">
                 <Tab.Content>
-                  <Tab.Pane eventKey="first">First tab content</Tab.Pane>
-                  <Tab.Pane eventKey="second">
-                    <Comments />
+                  <Tab.Pane eventKey="first">
+                    <ForumSatu />
+                    <ForumDua />
                   </Tab.Pane>
+                  
+                  <Tab.Pane eventKey="second">
+                  <ForumTiga />
+                  </Tab.Pane>
+
+                  <Tab.Pane eventKey="three">
+                    <ForumEmpat />
+                  </Tab.Pane>
+                    
                 </Tab.Content>
               </Col>
             </Row>

@@ -37,10 +37,10 @@ const Artikel = () => {
                 {
                     article ? (
                         <div>
-                            <div className='mt-4'>
+                            <div className='mt-4 artikel'>
                                 <h2 className='fs-bold text-center mb-4'>{article.title}</h2>
-                                <img src={article.image} alt="img-artikel" className='text-center' />
-                                <p>{article.text}</p>
+                                <img src={article.image} alt="img-artikel" className='text-center mb-4 img-fluid' />
+                                <p>{article.deskripsi}</p>
                             </div>
                         </div>
                     ) : (

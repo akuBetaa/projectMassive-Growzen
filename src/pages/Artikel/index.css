@@ -12,10 +12,22 @@
     --navbar-color : #ffffff;
 }
 
+.postArtikel {
+    margin-bottom: 100px;
+}
+
 .postArtikel .kembali {
     margin-top: 130px;
 }
 
 .postArtikel .kembali a {
     text-decoration: none;
+}
+
+.postArtikel .artikel img {
+    margin-left: 250px;
+}
+
+.postArtikel .artikel p {
+    font-size: 20px;
 }

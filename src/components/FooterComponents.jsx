@@ -29,7 +29,9 @@ const FooterComponents = () => {
           
           <Col className='col-lg-3 pt-3'>
            <h5 className='fw-bold'>Temukan Sesama PejuangTB</h5>
-           <button className='btn-gabung btn'>Gabung Forum</button>
+           <Link to="/forum">
+            <button className='btn-gabung btn'>Gabung Forum</button>
+           </Link>
           </Col>
           
           <Col className='col-lg-3 pt-3'>

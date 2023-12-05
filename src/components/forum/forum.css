@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap');
+
+* {
+    font-family: 'Manrope', sans-serif;
+}
+
+:root {
+    --primary-color : #ffffff;
+    --secondary-color : #4D77FF;
+    --color-text : #121212;
+    --color-text2 : #696969;
+    --navbar-color : #ffffff;
+}
+
+.formuser .user {
+    margin-bottom: 20px;
+}
+
+.formuser .user img {
+    border-radius: 50%;
+    max-width: 50px;
+}
+
+.formuser .user h5 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+
+.feeduser {
+    margin-top: 30px;
+    border: 1px solid #696969;
+    border-left: none;
+    border-right: none;
+    padding-block: 20px;
+}
+
+.feeduser .user img {
+    border-radius: 50%;
+    max-width: 50px;
+    max-height: 50px;
+}
+
+.feeduser .user h5 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.feeduser .user p {
+    font-size: 12px;
+    color: var(--color-text2);
+}
+
+.feeduser .postingan .barlikecomment {
+    /* border: 1px solid #ffffff; */
+    border-bottom: 1px solid #696969;
+    padding: 0px 0px 15px 0px;
+}
+
+.feedquestion {
+    margin-top: 30px;
+    border: 1px solid #696969;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    padding-block: 20px;
+}
+
+.myquestion .user img {
+    border-radius: 50%;
+    max-width: 50px;
+    max-height: 50px;
+}
+
+.myquestion .user h5 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.myquestion .user p {
+    font-size: 12px;
+    color: var(--color-text2);
+}
+
+.partisipasi {
+    margin-top: 30px;
+    border: 1px solid #696969;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    padding-block: 20px;
+}
+
+.partisipasi .user img {
+    border-radius: 50%;
+    max-width: 50px;
+    max-height: 50px;
+}
+
+.partisipasi .user h5 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.partisipasi .user p {
+    font-size: 12px;
+    color: var(--color-text2);
+}

@@ -108,7 +108,9 @@ const BerandaPage = () => {
                 <p className='px-2 m-0'>Saling berbagi, memotvasi sembuh bersama</p>
               </div>
 
-              <button className='btn btn-primary mt-4 px-4 py-2'>Gabung Sekarang!</button>
+              <Link to={"/forum"}>
+                <button className='btn btn-primary mt-4 px-4 py-2'>Gabung Sekarang!</button>
+              </Link>
             </Col>
           </Row>
         </Container>
