@@ -1,9 +1,7 @@
 import { useState } from 'react';
 import { Button, Modal, Form } from 'react-bootstrap';
-
-//import link
-// import { Link } from "react-router-dom";
-// import SignupComponents from './SignupComponents';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 //import image
 import LogoImag from "../assets/logo/logo-tb.png"
@@ -25,6 +23,28 @@ function LoginComponents() {
 	const handleCloseRegister = () => {
 		setShowRegister(false);
 	};
+
+	const [email, setEmail] = useState('');
+	const [password, setPassword] = useState('');
+
+	const [msg, setMsg] = useState(' ');
+	const navigate = useNavigate();
+
+	const Auth = async (e) => {
+		e.preventDefault();
+
+		try {
+			await axios.post('http://localhost:3005/login', {
+				email: email,
+				password: password
+			});
+			navigate.push("/forum");
+		} catch (error) {
+			if (error.response) {
+				setMsg(error.response.data.msg)
+			}
+		}
+	}
 
 	return (
 		<>
@@ -56,8 +76,13 @@ function LoginComponents() {
 						<h3>Login to your account</h3>
 					</div>
 
+					<div className='eror text-center'>
+						<p>{msg}</p>
+					</div>
+
+
 					<>
-						<Form className='wrapper'>
+						<Form className='wrapper' onSubmit={ Auth }>
 							<Form.Group
 								className='mb-3 was-validated'
 								controlId='exampleForm.ControlInput1'
@@ -66,6 +91,8 @@ function LoginComponents() {
 								<Form.Control
 									type='email'
 									placeholder='name@example.com'
+									value={email} 
+									onChange={(e) => setEmail(e.target.value)}
 									autoFocus
 									required
 								/>
@@ -77,7 +104,9 @@ function LoginComponents() {
 								<Form.Label>Password</Form.Label>
 								<Form.Control
 									type='password'
-									placeholder='password'
+									placeholder='***********'
+									value={password} 
+									onChange={(e) => setPassword(e.target.value)}
 									autoFocus
 									required
 								/>
@@ -97,6 +126,7 @@ function LoginComponents() {
 						<p>
 							Don't have an account?
 							<Button
+								className='inibutton'
 								variant='primary'
 								onClick={handleShowRegister}
 							>

@@ -9,7 +9,7 @@ import PhoneImg from "../assets/img/phone.png";
 
 // import data 
 import { fiturApps } from "../data/index.js"
-import { postArtikel } from "../data/index.js";
+import { postArtikel } from "../data/article.js";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';

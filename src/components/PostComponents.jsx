@@ -3,7 +3,7 @@ import {Container, Row, Col, Button} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 // import data 
-import {postArtikel} from "../data/index.js"
+import {postArtikel} from "../data/article.js"
 
 const PostComponents = () => {
   return (

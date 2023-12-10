@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Container, Row } from 'react-bootstrap';
 
 //import data artikel
-import { postArtikel } from '../../data/index.js';
+import { postArtikel } from '../../data/article.js';
 
 //import css
 import './index.css';

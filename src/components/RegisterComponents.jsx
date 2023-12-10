@@ -66,7 +66,7 @@ const RegisterComponents = ({ onShowRegister, onCloseRegister, onShowLogin }) =>
 					<h3>Signup to your account</h3>
 				</div>
 
-				<div className='text-center'>
+				<div className='eror text-center'>
 					<p>{msg}</p>
 				</div>
 
@@ -143,7 +143,10 @@ const RegisterComponents = ({ onShowRegister, onCloseRegister, onShowLogin }) =>
 					<p>
 						I have an account?
 
-						<Button variant='primary' onClick={handleShowLogin} >
+						<Button 
+							className='inibutton'
+							variant='primary' 
+							onClick={handleShowLogin} >
 							Login
 						</Button>
 					</p>

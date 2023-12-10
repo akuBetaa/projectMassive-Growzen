@@ -49,6 +49,8 @@
     border-radius: 0px;
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
+    /* height: 250px;
+    width: 458px; */
     /* border-top-right-radius: 2px ;
     border-top-left-radius: 2px ; */
 }
@@ -119,5 +121,24 @@
     justify-content: space-between;
 }
 
+.inibutton {
+    background: none;
+    color: var(--secondary-color);
+    font-weight: 700;
+    border: none;
+}
+
+.inibutton:hover, .inibutton:visited {
+    background: none;
+    color: var(--color-text);
+}
+
 
 /* LOGIN COMPONENT  */
+
+/* REGISTER COMPONENT  */
+.eror.text-center p {
+    color: red;
+    font-weight: 600;
+}
+/* REGISTER COMPONENT  */
