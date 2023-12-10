@@ -2,7 +2,7 @@ import {Container, Row, Col} from 'react-bootstrap';;
 import { Link } from "react-router-dom";
 
 //import logo
-import LogoImage from "/public/logo2.png";
+import LogoImage from "../assets/logo/logo-tb.png";
 import PlaysoteImage from "../assets/playstore.svg";
 
 const FooterComponents = () => {

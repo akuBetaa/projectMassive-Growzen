@@ -4,7 +4,7 @@ import { Navbar, Container, Nav } from 'react-bootstrap';
 import { navLinks } from "../data/index";
 import { NavLink } from "react-router-dom";
 
-import LogoImage from "/public/logo2.png"
+import LogoImage from "../assets/logo/logo-tb.png"
 import LoginComponents from "../components/LoginComponents"
 
 const NavbarComponents = () => {

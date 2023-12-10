@@ -29,7 +29,7 @@ const ForumDua = () => {
                             Itu gak apa2 atau gimana ya?
 
                         </p>
-
+                        
                         <div className='d-flex barlikecomment'>
                             <div className='d-flex '>
                                 <img src={IconLike} alt="" />
