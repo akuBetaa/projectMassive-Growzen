@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Modal, Form } from 'react-bootstrap';
 import axios from "axios";
-// import useNavigate from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
-// import { unstable_HistoryRouter } from 'react-router-dom';
 
 //import image
 import LogoImage from "../assets/logo/logo-tb.png"
@@ -27,7 +24,6 @@ const RegisterComponents = ({ onShowRegister, onCloseRegister, onShowLogin }) =>
 	const [confPassword, setConfPassword ]  = useState('');
 
 	const [msg, setMsg] = useState('');
-	const navigate = useNavigate();
 
 	const Register = async (e) => {
 		e.preventDefault();
@@ -39,7 +35,8 @@ const RegisterComponents = ({ onShowRegister, onCloseRegister, onShowLogin }) =>
 			password: password,
 			confPassword: confPassword
 		  });
-		  navigate('/login');
+		  alert('Register Berhasil');
+		  handleShowLogin();
 		} catch (error) {
 		  if (error.response) {
 			setMsg(error.response.data.msg);

@@ -38,7 +38,8 @@ function LoginComponents() {
 				email: email,
 				password: password
 			});
-			navigate.push("/forum");
+			alert('Login Berhasil');
+			navigate("/profil");
 		} catch (error) {
 			if (error.response) {
 				setMsg(error.response.data.msg)

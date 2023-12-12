@@ -9,6 +9,7 @@ import Artikel from './pages/Artikel'
 import NavbarComponents from './components/NavbarComponents'
 import FooterComponents from './components/FooterComponents'
 import LoginComponents from './components/LoginComponents'
+import SuksesPage from './pages/SuksesPage'
 
 function App() {
   return (
@@ -20,6 +21,8 @@ function App() {
         <Route path='/artikel' Component={ArtikelPage} />
         <Route path='/forum' Component={ForumPage} />
         <Route path='/artikel/:id' Component={Artikel}/>
+
+        <Route path='/profil' Component={SuksesPage}></Route>
         <Route path='/login' Component={LoginComponents}></Route>
         {/* <Route path='signup' Component={SignupPage} />  */}
       </Routes>

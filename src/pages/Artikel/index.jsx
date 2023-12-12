@@ -37,9 +37,9 @@ const Artikel = () => {
                 {
                     article ? (
                         <div>
-                            <div className='mt-4 artikel'>
+                            <div className='mt-4 artikel align-items'>
                                 <h2 className='fs-bold text-center mb-4'>{article.title}</h2>
-                                <img src={article.image} alt="img-artikel" className='text-center mb-4 img-fluid' />
+                                <img src={article.image} alt="img-artikel" className='text-center mb-4 img-fluid align-items-center' />
                                 <p>{article.deskripsi}</p>
                             </div>
                         </div>

@@ -25,7 +25,8 @@
 }
 
 .postArtikel .artikel img {
-    margin-left: 250px;
+    margin-left: 400px;
+    max-width: 500px;
 }
 
 .postArtikel .artikel p {
