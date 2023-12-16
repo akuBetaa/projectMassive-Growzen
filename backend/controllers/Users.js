@@ -44,6 +44,28 @@ export const createUser = async(req, res) => {
         }
 }
 
+export const registerUser = async(req, res) => {
+    const { name, email, password, confPassword, role = 'user' } = req.body;
+    if (!name || !email || !password) {
+      return res.status(400).json({ message: 'Nama, email, dan password harus diisi' });
+    }
+
+    if(password !== confPassword ) return res.status(400).json({ msg : "Password dan Konfirmasi Password tidak cocok "});
+
+    const hashPassword = await argon2.hash(password);
+        try {
+            await Users.create ({
+                name : name,
+                email : email,
+                password : hashPassword,
+                role : role
+            });
+            res.status(201).json({ msg : "Register berhasil"})
+        } catch (error) {
+            res.status(400).json({ msg : error.message})
+    }
+}
+
 export const updateUser = async(req, res) => {
     const user = await Users.findOne({
         where : {

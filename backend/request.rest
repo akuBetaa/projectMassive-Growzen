@@ -5,8 +5,8 @@ POST http://localhost:3007/users
 Content-Type: application/json
 
 {
-    "name" : "Beta NA",
-    "email" : "beta@gmail.com",
+    "name" : "Beta Nurul",
+    "email" : "betanurul@gmail.com",
     "password" : "1234",
     "confPassword" : "1234",
     "role" : "user"
@@ -41,6 +41,16 @@ DELETE   http://localhost:3007/users/33a67c15-e70f-42d3-bf8e-b8140d691604
 
 
 ###
+//Login Admin
+POST http://localhost:3007/login
+Content-Type: application/json
+
+{
+    "email" : "admin@gmail.com",
+    "password" : "1234"
+}
+
+###
 //Login User
 POST http://localhost:3007/login
 Content-Type: application/json
@@ -55,3 +65,15 @@ GET http://localhost:3007/me
 
 ###
 DELETE http://localhost:3007/logout
+
+###
+//resgister
+POST http://localhost:3007/register
+Content-Type: application/json
+
+{
+    "name" : "Beta",
+    "email" : "beta2@gmail.com",
+    "password" : "1234",
+    "confPassword" : "1234"
+}

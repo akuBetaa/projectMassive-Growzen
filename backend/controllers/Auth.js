@@ -1,6 +1,11 @@
 import Users from "../models/UserModel.js";
 import argon2 from "argon2";
 
+// //untuk registrasi
+// export const Register = async (req, res) => {
+//     const user = await Users.register();
+//   };
+
 //untuk login
 export const Login = async (req, res) => {
     const user = await Users.findOne({
@@ -24,6 +29,7 @@ export const Login = async (req, res) => {
     res.status(200).json({uuid, name, email, role});
 }
 
+//untuk me
 export const Me = async (req, res) => {
     if(!req.session.userId) {
         return res.status(401).json({ msg : "Mohon login ke akun Anda"})
