@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap');
+
+* {
+    font-family: 'Manrope', sans-serif;
+}
+
+:root {
+    --primary-color : #ffffff;
+    --secondary-color : #4D77FF;
+    --color-text : #121212;
+    --color-text2 : #696969;
+    --navbar-color : #ffffff;
+}
+
+.postArtikel {
+    margin-bottom: 100px;
+}
+
+.postArtikel .kembali {
+    margin-top: 130px;
+}
+
+.postArtikel .kembali a {
+    text-decoration: none;
+}
+
+.postArtikel .artikel img {
+    margin-left: 400px;
+    max-width: 500px;
+}
+
+.postArtikel .artikel p {
+    font-size: 20px;
+}
