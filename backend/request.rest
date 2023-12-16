@@ -1,0 +1,57 @@
+//Pengecekan
+
+//Create a user
+POST http://localhost:3007/users
+Content-Type: application/json
+
+{
+    "name" : "Beta NA",
+    "email" : "beta@gmail.com",
+    "password" : "1234",
+    "confPassword" : "1234",
+    "role" : "user"
+}
+
+###
+//Get All Users
+GET http://localhost:3007/users
+
+###
+//Get By Id User
+GET http://localhost:3007/users/33a67c15-e70f-42d3-bf8e-b8140d691604
+
+
+###
+//Updating a User
+PATCH  http://localhost:3007/users/33a67c15-e70f-42d3-bf8e-b8140d691604
+Content-Type: application/json
+
+{
+    "name" : "Beta Nurul A",
+    "email" : "beta@gmail.com",
+    "password" : "",
+    "confPassword" : "",
+    "role" : "user"
+}
+
+
+###
+//Delete a user
+DELETE   http://localhost:3007/users/33a67c15-e70f-42d3-bf8e-b8140d691604
+
+
+###
+//Login User
+POST http://localhost:3007/login
+Content-Type: application/json
+
+{
+    "email" : "beta@gmail.com",
+    "password" : "1234"
+}
+
+###
+GET http://localhost:3007/me
+
+###
+DELETE http://localhost:3007/logout
