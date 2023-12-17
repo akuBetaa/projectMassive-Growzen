@@ -1,12 +1,7 @@
 import Users from "../models/UserModel.js";
 import argon2 from "argon2";
 
-// //untuk registrasi
-// export const Register = async (req, res) => {
-//     const user = await Users.register();
-//   };
-
-//untuk login
+////untuk login
 export const Login = async (req, res) => {
     const user = await Users.findOne({
         where : {

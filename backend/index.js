@@ -5,6 +5,7 @@ import dotenv from "dotenv";
 
 import db from "./config/Database.js";
 import SequelizeStore from "connect-session-sequelize";
+import fileUpload from 'express-fileupload';
 
 import UserRoute from "./routes/UserRoute.js";
 import BlogRoute from "./routes/BlogRoute.js"
@@ -42,6 +43,10 @@ app.use(cors({
 }));
 
 app.use(express.json());
+app.use(fileUpload());
+
+app.use(express.static('public'));
+
 app.use(UserRoute);
 app.use(BlogRoute);
 app.use(AuthRoute);
@@ -49,5 +54,5 @@ app.use(AuthRoute);
 // store.sync();
 
 app.listen(process.env.APP_PORT, () => {
-    console.log("Server berjalan pada Port 3007")
+    console.log(`Server berjalan pada Port ${process.env.APP_PORT}`)
 })

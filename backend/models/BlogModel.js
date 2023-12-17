@@ -39,10 +39,11 @@ const Blog = db.define('blog', {
     },
     userId: {
         type : DataTypes.INTEGER,
-        allowNull : false,
-        validate : {
-            notEmpty : true,
-        }
+        allowNull : true,
+    },
+    url: {
+        type : DataTypes.INTEGER,
+        allowNull : true,
     },
 }, {
     freezeTableName : true,
