@@ -3,8 +3,10 @@ import cors from "cors";
 import session from "express-session";
 import dotenv from "dotenv";
 import db from "./config/Database.js"
+import morgan from "morgan"
 
 import UserRoute from "./routes/UserRoute.js";
+import AuthRoute from "./routes/AuthRoute.js"
 
 
 dotenv.config();
@@ -19,8 +21,12 @@ app.use(session({
     }
 }))
 
+// Gunakan morgan sebagai middleware
+app.use(morgan('combined'));
+
 app.use(express.json());
 app.use(UserRoute);
+app.use(AuthRoute);
 
 
 app.listen(process.env.APP_PORT, () => {

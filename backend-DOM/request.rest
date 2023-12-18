@@ -27,7 +27,7 @@ Content-Type: application/json
 }
 
 ###
-PATCH http://localhost:3008/users/2
+PATCH http://localhost:3008/users/7
 Content-Type: application/json
 
 {
@@ -40,3 +40,12 @@ Content-Type: application/json
 
 ###
 DELETE http://localhost:3008/users/2
+
+###
+POST http://localhost:3008/login
+Content-Type: application/json
+
+{
+    "email" : "admin@gmail.com",
+    "passwprd" : "1234"
+}
