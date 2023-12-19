@@ -47,5 +47,8 @@ Content-Type: application/json
 
 {
     "email" : "admin@gmail.com",
-    "passwprd" : "1234"
+    "password" : "1234"
 }
+
+###
+GET http://localhost:3008/me
