@@ -34,12 +34,13 @@ function LoginComponents() {
 		e.preventDefault();
 
 		try {
-			await axios.post('http://localhost:3005/login', {
+			await axios.post('http://localhost:3008/login', {
 				email: email,
 				password: password
 			});
 			alert('Login Berhasil');
 			navigate("/profil");
+			handleCloseLogin()
 		} catch (error) {
 			if (error.response) {
 				setMsg(error.response.data.msg)
