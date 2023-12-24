@@ -5,40 +5,22 @@ import { Navigate } from 'react-router-dom';
 import { Container, Row, Col } from 'react-bootstrap'
 
 const SuksesPage = () => {
-    const [ name, setName ] = useState('');
-    const [ token, setToken ] = useState('');
+    // const [ name, setName ] = useState('');
+    // const [ token, setToken ] = useState('');
+    const [msg, setMsg] = useState('')
 
-    useEffect (() => {
-        refreshToken();
-    }, []);
+    // useEffect (() => {
+    //     getMe();
+    // }, []);
 
-    const refreshToken = async () => {
+    const getMe = async () => {
         try {
-          const response = await axios.get('http://localhost:3008/token');
-          setToken(response.data.accessToken);
-    
-          const decoded = jwtDecode(response.data.accessToken);
-          console.log(decoded);
+          const response = await axios.get('http://localhost:3008/me');
+          return response.data;
         } catch (error) {
-        //   console.error('Error refreshing token:', error);
+            setMsg(error.response.data.msg)
         }
       };
-    
-    // const refreshToken = async () => {
-    //     try {
-    //         const response = await axios.get('http://localhost:3005/token');
-    //         // if (response.data && response.data.accessToken) {
-    //            // setToken(response.data.accessToken);
-
-    //             const decoded = jwtDecode(response.data.accessToken);
-    //             console.log(decoded);
-    //         // } else {
-    //         //     //console.error('Access token not found in response data');
-    //         // }
-    //     } catch (error) {
-    //         console.error('Error refreshing token:', error);
-    //     }
-    // };
     
     
   return (
@@ -53,6 +35,7 @@ const SuksesPage = () => {
                 
             </Container>
         </div>
+    </div>
     )
 }
 

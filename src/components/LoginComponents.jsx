@@ -40,9 +40,9 @@ function LoginComponents() {
 				email: email,
 				password: password
 			});
-			console.log(data);
-			localStorage.setItem("token", data.data.accessToken)
-
+			// console.log(data);
+			// localStorage.setItem("token", data.data.accessToken)
+			// alert("Login Berhasil");
 			Swal.fire({
 				title: "Login Berhasi;!",
 				text: "You clicked the button!",

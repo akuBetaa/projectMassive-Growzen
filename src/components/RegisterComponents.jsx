@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Modal, Form } from 'react-bootstrap';
 import axios from "axios";
+import Swal from "sweetalert2";
 
 //import image
 import LogoImage from "../assets/logo/logo-tb.png"
@@ -29,7 +30,7 @@ const RegisterComponents = ({ onShowRegister, onCloseRegister, onShowLogin }) =>
 		e.preventDefault();
 	  
 		try {
-		  await axios.post('http://localhost:3005/users', {
+		  await axios.post('http://localhost:3008/register', {
 			email: email,
 			name: name,
 			password: password,
@@ -43,7 +44,8 @@ const RegisterComponents = ({ onShowRegister, onCloseRegister, onShowLogin }) =>
 		  handleShowLogin();
 		} catch (error) {
 		  if (error.response) {
-			setMsg(error.response.data.msg);
+			setMsg('Terjadi kesalahan saat mendaftar. Coba lagi nanti.');
+			//.. setMsg(error.response.data.msg);
 		  }
 		}
 	  };
