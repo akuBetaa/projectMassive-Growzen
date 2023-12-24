@@ -36,7 +36,7 @@ function LoginComponents() {
 		e.preventDefault();
 
 		try {
-			const data = await axios.post('http://localhost:3005/login', {
+			await axios.post('http://localhost:3008/login', {
 				email: email,
 				password: password
 			});
