@@ -35,7 +35,11 @@ const RegisterComponents = ({ onShowRegister, onCloseRegister, onShowLogin }) =>
 			password: password,
 			confPassword: confPassword
 		  });
-		  alert('Register Berhasil');
+		  Swal.fire({
+			title: "Register Berhasil",
+			text: "Klik button untuk login!",
+			icon: "success"
+		  });
 		  handleShowLogin();
 		} catch (error) {
 		  if (error.response) {

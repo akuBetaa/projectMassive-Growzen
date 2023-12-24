@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios';
-import {jwtDecode} from 'jwt-decode';
 // import jwt_decoded from "jwt-decode";
 import { Navigate } from 'react-router-dom';
 import { Container, Row, Col } from 'react-bootstrap'
 
 const SuksesPage = () => {
-
     const [ name, setName ] = useState('');
     const [ token, setToken ] = useState('');
 
@@ -16,7 +14,7 @@ const SuksesPage = () => {
 
     const refreshToken = async () => {
         try {
-          const response = await axios.get('http://localhost:3005/token');
+          const response = await axios.get('http://localhost:3008/token');
           setToken(response.data.accessToken);
     
           const decoded = jwtDecode(response.data.accessToken);
@@ -55,8 +53,7 @@ const SuksesPage = () => {
                 
             </Container>
         </div>
-    </div>
-  )
+    )
 }
 
 export default SuksesPage

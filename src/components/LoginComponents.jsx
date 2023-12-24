@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import LogoImag from "../assets/logo/logo-tb.png"
 import PlayStoreImg from "../assets/playstore.svg"
 import RegisterComponents from './RegisterComponents';
+import Swal from 'sweetalert2';
 
 function LoginComponents() {
 	const [showLogin, setShowLogin] = useState(false);
@@ -27,6 +28,7 @@ function LoginComponents() {
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 
+
 	const [msg, setMsg] = useState(' ');
 	const navigate = useNavigate();
 
@@ -38,7 +40,14 @@ function LoginComponents() {
 				email: email,
 				password: password
 			});
-			alert('Login Berhasil');
+			console.log(data);
+			localStorage.setItem("token", data.data.accessToken)
+
+			Swal.fire({
+				title: "Login Berhasi;!",
+				text: "You clicked the button!",
+				icon: "success"
+			  });
 			navigate("/profil");
 			handleCloseLogin()
 		} catch (error) {
@@ -84,7 +93,7 @@ function LoginComponents() {
 
 
 					<>
-						<Form className='wrapper' onSubmit={ Auth }>
+						<Form className='wrapper' >
 							<Form.Group
 								className='mb-3 was-validated'
 								controlId='exampleForm.ControlInput1'
@@ -93,7 +102,7 @@ function LoginComponents() {
 								<Form.Control
 									type='email'
 									placeholder='name@example.com'
-									value={email} 
+									value={email}
 									onChange={(e) => setEmail(e.target.value)}
 									autoFocus
 									required
@@ -107,7 +116,7 @@ function LoginComponents() {
 								<Form.Control
 									type='password'
 									placeholder='***********'
-									value={password} 
+									value={password}
 									onChange={(e) => setPassword(e.target.value)}
 									autoFocus
 									required
@@ -118,6 +127,7 @@ function LoginComponents() {
 								variant='primary'
 								type='submit'
 								className='my-2'
+								onClick={Auth}
 							>
 								Login
 							</Button>
@@ -164,6 +174,14 @@ function LoginComponents() {
 					/>
 				</Modal>
 			)}
+			{/* {
+				token ? <Button
+					variant='primary'
+					onClick={handleShowLogin}
+				>
+					LogOut
+				</Button> : ""
+			} */}
 		</>
 	);
 }
