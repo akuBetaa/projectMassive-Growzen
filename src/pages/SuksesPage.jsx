@@ -5,7 +5,7 @@ import { Navigate } from 'react-router-dom';
 import { Container, Row, Col } from 'react-bootstrap'
 
 const SuksesPage = () => {
-    // const [ name, setName ] = useState('');
+    const [ name, setName ] = useState('');
     // const [ token, setToken ] = useState('');
     const [msg, setMsg] = useState('')
 
@@ -13,14 +13,20 @@ const SuksesPage = () => {
     //     getMe();
     // }, []);
 
-    const getMe = async () => {
-        try {
-          const response = await axios.get('http://localhost:3008/me');
-          return response.data;
-        } catch (error) {
-            setMsg(error.response.data.msg)
-        }
-      };
+    useEffect(() => {
+        const fetchUser = async () => {
+            try {
+              const response = await axios.get('http://localhost:3008/me');
+              console.log(response);
+              setName(response.data.name)
+            } catch (error) {
+                setMsg(error.response.data.msg)
+            }
+          };
+        fetchUser()
+    }, []);
+
+    // console.log(name);
     
     
   return (
@@ -29,7 +35,7 @@ const SuksesPage = () => {
             <Container >
                 <Row className='align-items-center text-center laman'>
                     <Col>
-                    <h2>Selamat Datang </h2>
+                    <h2>Selamat Datang {name} </h2>
                     </Col>
                 </Row>
                 

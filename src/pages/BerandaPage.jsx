@@ -27,7 +27,7 @@ const BerandaPage = () => {
     <div className="beranda">
 
       {/* HERO SECTION  */}
-      <header className="w-100 min-vh-100 d-flex align-items-center">
+      <header className="w-100  d-flex align-items-center">
         <Container>
           <Row className='header-box d-flex align-items-center'>
             <Col lg="7">
