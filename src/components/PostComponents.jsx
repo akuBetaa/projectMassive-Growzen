@@ -15,7 +15,7 @@ const PostComponents = () => {
                     <Col key={article.id} className='kartu'>
                         <img className='w-100' src={article.image} alt="" />
                         <div className='text-artikel'>
-                            <h5 className="fw-bold fs-4 mb-2">{article.title}</h5>
+                            <h5 className="fw-bold fs-5 mb-2">{article.title}</h5>
                             <p>{article.text}</p>
                             <Link to={`/artikel/${article.id}`}>
                                 <Button className='mt-2'>Selengkapnya</Button>

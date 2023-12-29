@@ -94,8 +94,10 @@ header {
 .hero-img {
     /* z-index: 9; */
     margin-top: 100px;
-    margin-left: -44px;
+    margin-left: -104px;
     background: url(/src/assets/hero.svg) no-repeat center;
+    /* width: 500px;
+    height: 700px; */
     width: 671.135px;
     height: 730px;
 }
@@ -125,10 +127,10 @@ header {
 
 .beranda .fitur .row:nth-child(2) {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
     gap: 30px;
     padding-inline: 10px;
-    margin: 0 90px 0 90px ;
+    margin: 0px 40px 0 40px ;
 }
 
 .beranda .fitur .row:nth-child(2) .col {
@@ -170,6 +172,10 @@ header {
 
 .beranda .cta-forum .text2 {
     color: var(--color-text2);
+}
+
+.beranda .cta-forum .img-forum {
+    width: 95%;
 }
 
 /* STYLE CTA FORUM SECTION  */
